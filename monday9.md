@@ -69,28 +69,28 @@
 2. Основные действия:
 
     ```
-    locator.check()            Установите флажок ввода.
-    locator.click()            Нажмите на элемент.
-    locator.uncheck()          Снимите флажок с поля ввода.
-    locator.hover()            Наведите курсор мыши на элемент.
-    locator.fill()             Заполните поле формы, введите текст.
-    locator.focus()            Сфокусируйте элемент.
-    locator.press()            Нажмите одну клавишу.
-    locator.set_input_files()  Выберите файлы для загрузки.
-    locator.select_option()    Выберите вариант в выпадающем списке.
+    locator.check()               Установите флажок ввода.
+    locator.click()               Нажмите на элемент.
+    locator.uncheck()             Снимите флажок с поля ввода.
+    locator.hover()               Наведите курсор мыши на элемент.
+    locator.fill()                Заполните поле формы, введите текст.
+    locator.focus()               Сфокусируйте элемент.
+    locator.press()               Нажмите одну клавишу.
+    locator.set_input_files()     Выберите файлы для загрузки.
+    locator.select_option()       Выберите вариант в выпадающем списке.
     ```
 
 3. Утверждения:
    ```
-   expect(locator).to_be_checked()             Флажок установлен.
-   expect(locator).to_be_enabled()             Управление включено.
-   expect(locator).to_be_visible()             Элемент виден.
-   expect(locator).to_contain_text()           Элемент содержит текст.
-   expect(locator).to_have_attribute()         Элемент имеет атрибут.
-   expect(locator).to_have_count()             Список элементов имеет заданную длину.
-   expect(locator).to_have_text()              Элемент соответствует тексту.
-   expect(locator).to_have_value()             Входной элемент имеет значение.
-   expect(page).to_have_title()                Страница имеет заголовок.
-   expect(page).to_have_url()                  Страница имеет URL.
+   expect(locator).to_be_checked()            Флажок установлен.
+   expect(locator).to_be_enabled()            Управление включено.
+   expect(locator).to_be_visible()            Элемент виден.
+   expect(locator).to_contain_text()          Элемент содержит текст.
+   expect(locator).to_have_attribute()        Элемент имеет атрибут.
+   expect(locator).to_have_count()            Список элементов имеет заданную длину.
+   expect(locator).to_have_text()             Элемент соответствует тексту.
+   expect(locator).to_have_value()            Входной элемент имеет значение.
+   expect(page).to_have_title()               Страница имеет заголовок.
+   expect(page).to_have_url()                 Страница имеет URL.
    ```
    
