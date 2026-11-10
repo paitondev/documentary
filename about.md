@@ -99,3 +99,7 @@
    expect(page).to_have_url()                 Страница имеет URL.
    ```
    
+4. Codegen
+   ```
+   playwright codegen demo.playwright.dev/todomvc
+   ```
