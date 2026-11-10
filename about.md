@@ -4,14 +4,12 @@
 
 2. Установка Playwright pytest:
 
-   UV:
    ```
    uv init
    uv add pytest-playwright
    playwright install
    ```
 
-   PIP:
    ```
    pip install pytest-playwright
    playwright install
@@ -19,12 +17,10 @@
 
 3. Обновление библиотеки:
 
-   UV:
    ```
    uv add --upgrade pytest-playwright playwright
    ```
 
-   PIP:
    ```
    pip install pytest-playwright playwright -U
    ```
@@ -98,8 +94,8 @@
    expect(page).to_have_title()               Страница имеет заголовок.
    expect(page).to_have_url()                 Страница имеет URL.
    ```
-   
-4. Codegen, и его возможности.
+
+# 3. Codegen, и его возможности. (Генерация текстов.)
    ```
    playwright codegen demo.playwright.dev/todomvc
    ```
