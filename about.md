@@ -99,7 +99,12 @@
    expect(page).to_have_url()                 Страница имеет URL.
    ```
    
-4. Codegen
+4. Codegen, и его возможности.
    ```
    playwright codegen demo.playwright.dev/todomvc
    ```
+   1. Запись теста.
+   2. Генерация локаторов.
+   3. Эмуляция.
+
+
