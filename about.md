@@ -101,13 +101,13 @@
 ```
 pytest
 ```
-Запуск в UI.
+Запуск параллельно.
 ```
-npx playwright test --ui
+pytest --numprocesses 2
 ```
 Запуск в моде HEADED.
 ```
-npx playwright test --headed
+pytest --headed
 ```
 Запуск в разных браузерах.
 ```
@@ -124,20 +124,4 @@ pytest tests/test_todo_page.py tests/test_landing_page.py
 Запуск файлов с определенным словом, например (landing, login).
 ```
 pytest -k test_add_a_todo_item
-```
-Запуск теста и его обозначение.
-```
-npx playwright test -g "add a todo item"
-```
-Запуск проваленного теста.
-```
-npx playwright test --last-failed
-```
-Playwright сохраняет список непройденных тестов после предыдущего запуска в файле <outputDir>/.last-run.json, чтобы использовать другой путь к файлу, передайте аргумент --last-failed-file=<путь> или задайте переменную окружения PLAYWRIGHT_LAST_RUN_OUTPUT_FILE.
-```
-npx playwright test --last-failed --last-failed-file=.cache/last-run-shard-1.json
-```
-Запуск тестов из Visual Studio Code (VS Code).
-```
-качай расширение Playwright Test for VSCode
 ```
