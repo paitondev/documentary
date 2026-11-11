@@ -172,3 +172,17 @@ jobs:
         name: playwright-traces
         path: test-results/
 ```
+# 7. Справочник по плагину Pytest.
+Playwright предоставляет плагин Pytest для написания сквозных тестов.
+
+Для запуска тестов используйте Pytest CLI.
+```
+pytest --browser webkit --headed
+```
+Если вы хотите автоматически добавлять аргументы командной строки без их указания, вы можете использовать файл pytest.ini.
+```
+# content of pytest.ini
+[pytest]
+# Run firefox with UI
+addopts = --headed --browser firefox
+```
