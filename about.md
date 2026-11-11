@@ -137,3 +137,38 @@ pytest --tracing on/off/retain-on-failure
 ```
 playwright show-trace trace.zip
 ```
+# 6. Настройка CI.
+В этом разделе мы рассмотрим запуск тестов на GitHub с помощью GitHub Actions.
+
+Первым делом создаем папку .github/workflows, затем создаем файл playwright.yml.
+Пример кода, приведённый ниже, чтобы ваши тесты запускались при каждом push/pull-запросе для основной/ветки master.
+```
+name: Playwright Tests
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+    - name: Set up Python
+      uses: actions/setup-python@v6
+      with:
+        python-version: '3.13'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Ensure browsers are installed
+      run: python -m playwright install --with-deps
+    - name: Run your tests
+      run: pytest --tracing=retain-on-failure
+    - uses: actions/upload-artifact@v5
+      if: ${{ !cancelled() }}
+      with:
+        name: playwright-traces
+        path: test-results/
+```
