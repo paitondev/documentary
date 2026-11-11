@@ -90,6 +90,7 @@
    expect(page).to_have_url()                 Страница имеет URL.
    ```
 # 3. Codegen, и его возможности. (Генерация текстов.)
+Playwright может автоматически генерировать тесты, предоставляя быстрый способ начать тестирование. Codegen открывает окно браузера для взаимодействия и Playwright Inspector для записи, копирования и управления сгенерированными тестами.
    ```
    playwright codegen demo.playwright.dev/todomvc
    ```
@@ -124,4 +125,15 @@ pytest tests/test_todo_page.py tests/test_landing_page.py
 Запуск файлов с определенным словом, например (landing, login).
 ```
 pytest -k test_add_a_todo_item
+```
+# 5. Трассировка
+Playwright Trace Viewer — это графический инструмент, позволяющий просматривать записанные трассировки тестов Playwright, то есть вы можете перемещаться вперед и назад по каждому действию теста и визуально видеть, что происходило во время каждого действия.
+
+Запись трассировки.
+```
+pytest --tracing on/off/retain-on-failure
+```
+Вы можете открыть сохраненный трассировочный файл с помощью Playwright CLI или в браузере trace.playwright.dev.
+```
+playwright show-trace trace.zip
 ```
