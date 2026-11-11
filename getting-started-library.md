@@ -50,4 +50,8 @@ with sync_playwright() as p:
     page.screenshot(path="example.png")
     browser.close()
 ```
-#### По умолчанию Playwright запускает браузеры в хедлесс режиме. Чтобы увидеть пользовательский интерфейс браузера, установите параметр headless False в значение.
+#### По умолчанию Playwright запускает браузеры в хедлесс режиме. Чтобы увидеть пользовательский интерфейс браузера, установите параметр headless, False в значение.
+```
+firefox.launch(headless=False, slow_mo=50)
+```
+
